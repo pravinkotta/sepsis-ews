@@ -1,0 +1,122 @@
+[
+  {
+    "id": "q01",
+    "query": "Should lactate be measured in suspected sepsis?",
+    "expected_terms": ["lactate"],
+    "note": "SSC recommendation 3"
+  },
+  {
+    "id": "q02",
+    "query": "Obtain blood cultures before administering antibiotics",
+    "expected_terms": ["blood cultures", "cultures"],
+    "note": "Hour-1 bundle / infection diagnosis"
+  },
+  {
+    "id": "q03",
+    "query": "How quickly should antimicrobials be given in septic shock?",
+    "expected_terms": ["antimicrobial", "one hour", "1 h"],
+    "note": "SSC recommendation 12"
+  },
+  {
+    "id": "q04",
+    "query": "How much crystalloid fluid for initial resuscitation?",
+    "expected_terms": ["30 ml/kg", "30ml/kg", "crystalloid"],
+    "note": "SSC recommendation 5 / Hour-1"
+  },
+  {
+    "id": "q05",
+    "query": "Dynamic measures of fluid responsiveness and passive leg raise",
+    "expected_terms": ["passive leg raise", "fluid responsiveness", "dynamic"],
+    "note": "SSC recommendation 6"
+  },
+  {
+    "id": "q06",
+    "query": "What mean arterial pressure target should vasopressors aim for?",
+    "expected_terms": ["mean arterial pressure", "65"],
+    "note": "SSC recommendation 9"
+  },
+  {
+    "id": "q07",
+    "query": "Which vasopressor is first line in septic shock?",
+    "expected_terms": ["norepinephrine", "vasopressor"],
+    "note": "SSC haemodynamic management"
+  },
+  {
+    "id": "q08",
+    "query": "When should source control be performed?",
+    "expected_terms": ["source control"],
+    "note": "SSC infection management"
+  },
+  {
+    "id": "q09",
+    "query": "Corticosteroids for refractory septic shock",
+    "expected_terms": ["corticosteroid"],
+    "note": "SSC additional therapies"
+  },
+  {
+    "id": "q10",
+    "query": "Red blood cell transfusion threshold in sepsis",
+    "expected_terms": ["transfusion", "hemoglobin"],
+    "note": "SSC additional therapies"
+  },
+  {
+    "id": "q11",
+    "query": "Lung protective ventilation tidal volume in sepsis",
+    "expected_terms": ["tidal volume", "ventilation"],
+    "note": "SSC ventilation"
+  },
+  {
+    "id": "q12",
+    "query": "Prone positioning for severe ARDS",
+    "expected_terms": ["prone"],
+    "note": "SSC ventilation"
+  },
+  {
+    "id": "q13",
+    "query": "Glucose control and insulin in critically ill sepsis patients",
+    "expected_terms": ["glucose", "insulin"],
+    "note": "SSC additional therapies"
+  },
+  {
+    "id": "q14",
+    "query": "Venous thromboembolism prophylaxis",
+    "expected_terms": ["thromboembolism", "prophylaxis"],
+    "note": "SSC additional therapies"
+  },
+  {
+    "id": "q15",
+    "query": "Renal replacement therapy for sepsis associated acute kidney injury",
+    "expected_terms": ["renal replacement"],
+    "note": "SSC additional therapies"
+  },
+  {
+    "id": "q16",
+    "query": "Enteral nutrition in critically ill patients with sepsis",
+    "expected_terms": ["nutrition", "enteral"],
+    "note": "SSC additional therapies"
+  },
+  {
+    "id": "q17",
+    "query": "Antibiotic de-escalation and duration of therapy",
+    "expected_terms": ["antibiotic", "de-escalation", "duration"],
+    "note": "SSC infection management"
+  },
+  {
+    "id": "q18",
+    "query": "Timing of ICU admission for sepsis",
+    "expected_terms": ["icu", "intensive care"],
+    "note": "SSC admission to intensive care"
+  },
+  {
+    "id": "q19",
+    "query": "SBAR escalation to the rapid response team",
+    "expected_terms": ["sbar", "rapid response"],
+    "note": "Project-local escalation policy"
+  },
+  {
+    "id": "q20",
+    "query": "Human approval token before paging rapid response",
+    "expected_terms": ["approval", "token"],
+    "note": "Project-local escalation policy"
+  }
+]

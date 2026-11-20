@@ -1,0 +1,25 @@
+{
+  "answer_relevancy": 0.606976,
+  "citation_validity": 1.0,
+  "context_precision": 0.920556,
+  "context_recall": 0.95,
+  "duration_seconds": 798.3,
+  "embedding_model": "text-embedding-3-small",
+  "estimated_generation_cost_usd": 0.010693,
+  "faithfulness": 0.892857,
+  "false_refusal_rate": 0.1,
+  "false_refusals": 2,
+  "generated_at": "2026-11-19T15:45:11.139935+00:00",
+  "generation_usage": {
+    "calls": 25,
+    "completion_tokens": 1847,
+    "prompt_tokens": 63897
+  },
+  "model": "gpt-4o-mini",
+  "n_queries": 20,
+  "n_refusals": 5,
+  "note": "20 authored referenced questions + 5 refusal questions. RAGAS uses gpt-4o-mini as judge; this is a regression suite, not an unbiased benchmark. RAGAS judge token usage is not included in generation_usage.",
+  "pricing_note": "gpt-4o-mini list prices used for an estimate; verify current pricing.",
+  "refusal_correctness": 1.0,
+  "retrieval_recall_at_5": 1.0
+}

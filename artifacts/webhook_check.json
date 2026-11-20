@@ -1,0 +1,15 @@
+{
+  "delivery": {
+    "delivered": true,
+    "detail": {
+      "attempts": 1,
+      "body": "This URL has no default content configured. <a href=\"https://webhook.site/#!/edit/12b90d94-b370-40da-a643-467ec5a88eb0\">Change response in Webhook.site</a>.",
+      "idempotency_key": "pager-check-001",
+      "status_code": 200
+    },
+    "transport": "webhook"
+  },
+  "received_body": "{\"source\":\"sepsis-ews\",\"event\":\"sepsis_escalation\",\"alert_id\":\"pager-check-001\",\"patient_id\":\"p000206\",\"summary\":\"Sepsis escalation alert pager-check-001\",\"note_sha256\":\"2d4bf8dce1ffc92c\"}",
+  "received_count": 1,
+  "url": "https://webhook.site/12b90d94-b370-40da-a643-467ec5a88eb0"
+}

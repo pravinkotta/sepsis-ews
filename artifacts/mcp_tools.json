@@ -1,0 +1,40 @@
+{
+  "descriptions": {
+    "draft_sbar": "Draft a cited SBAR. Proposes only; pages no one.",
+    "get_alert_history": "Prior alerts and approval decisions for this patient.",
+    "get_patient_state": "Vitals, labs, demographics and features up to as_of_hour (labels hidden).",
+    "get_recent_labs": "Lab rows in the last N hours, with hours since measurement.",
+    "page_rapid_response": "Irreversible page. Requires a human approval token bound to this alert.\n\n        The token is supplied by the approval UI after a clinician confirms.\n        Never fabricate, reuse, or derive it from the note.\n        ",
+    "propose_escalation": "Record a proposed escalation for human review. No side effect.",
+    "retrieve_guideline": "Top-k guideline chunks with ids for citation. Fails loud if unbuilt.",
+    "score_sepsis": "Calibrated sepsis risk plus top drivers. Fails loud if no model exists.",
+    "write_ehr_note": "Write an escalation note. Requires a human approval token."
+  },
+  "forbidden_present": [],
+  "get_patient_state": {
+    "is_error": false,
+    "text": "{\n  \"patient_id\": \"p000206\",\n  \"as_of_hour\": 15,\n  \"features\": {\n    \"patient_id\": \"p000206\",\n    \"icu_hour\": 15,\n    \"Age\": 69.68000030517578,\n    \"Gender\": 1.0,\n    \"Unit1\": 1.0,\n    \"Unit2\": 0.0,\n    \"HospAdmTime\": -0.019999999552965164,\n    \"ICULOS\": 15.0,\n    \"HR_last\": 109.0,\n    \"HR_mean_6h\": 107.33333587646484,\n    \"HR_mean_24h\": 101.78571319580078,\n    \"HR_missing_frac_24h\": 0.0,\n    \"O2Sat_last\": 92.0,\n    \"O2Sat_mean_6h\": 94.83333587646484,\n    \"O2Sat_mean_24h\": 95.35713958740234,\n   "
+  },
+  "measured_at": "2026-11-19T16:51:46Z",
+  "registry_count": 9,
+  "score_sepsis": {
+    "is_error": false,
+    "text": "{\n  \"risk\": 0.039118,\n  \"threshold\": 0.006174343975952555,\n  \"top_drivers\": [\n    {\n      \"feature\": \"SBP_last\",\n      \"contribution\": 0.466523,\n      \"direction\": \"increases\",\n      \"value\": null\n    },\n    {\n      \"feature\": \"HR_mean_24h\",\n      \"contribution\": 0.45747,\n      \"direction\": \"increases\",\n      \"value\": 101.786\n    },\n    {\n      \"feature\": \"SBP_mean_24h\",\n      \"contribution\": 0.227608,\n      \"direction\": \"increases\",\n      \"value\": null\n    },\n    {\n      \"feature\": \"Creatinine_"
+  },
+  "server": "sepsis-ews",
+  "tool_count": 9,
+  "tools": [
+    "get_patient_state",
+    "get_recent_labs",
+    "score_sepsis",
+    "retrieve_guideline",
+    "get_alert_history",
+    "draft_sbar",
+    "propose_escalation",
+    "page_rapid_response",
+    "write_ehr_note"
+  ],
+  "transport": "stdio",
+  "write_detail": "{\n  \"status\": \"denied\",\n  \"error\": \"ApprovalRequired\",\n  \"detail\": \"page_rapid_response is an irreversible action; a human approval token bound to this alert and patient is required\"\n}",
+  "write_without_token_blocked": true
+}

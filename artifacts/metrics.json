@@ -1,0 +1,91 @@
+{
+  "auprc": 0.060886,
+  "auroc": 0.831231,
+  "auroc_all_hours": 0.842384,
+  "best_iteration": 94,
+  "calibration": {
+    "brier": 0.016521,
+    "slope": 0.987664
+  },
+  "cohort": {
+    "pre_onset_hours": 232887,
+    "test_hours": 234431,
+    "test_patients": 6050,
+    "train_patients": 28235,
+    "val_patients": 6051
+  },
+  "duration_seconds": 63.8,
+  "generated_at": "2026-11-19T11:17:47.350692+00:00",
+  "model": "lightgbm",
+  "n_features": 90,
+  "patient_level_auroc": 0.862288,
+  "policy": {
+    "alerts_per_patient_day": 1.463,
+    "median_lead_hours": 7.0,
+    "n_alerts": 14291,
+    "n_early_detected": 351,
+    "n_eligible": 369,
+    "n_late": 0,
+    "n_missed": 12,
+    "n_on_time": 6,
+    "n_patients": 6050,
+    "patient_days": 9767.96,
+    "sensitivity": 0.9512,
+    "threshold": 0.0062
+  },
+  "prevalence": 0.01131,
+  "shap": {
+    "additivity_max_diff": 0.0,
+    "n_sample": 2000,
+    "top_features": [
+      {
+        "feature": "ICULOS",
+        "mean_abs_shap": 0.377073
+      },
+      {
+        "feature": "FiO2_hours_since",
+        "mean_abs_shap": 0.345051
+      },
+      {
+        "feature": "HospAdmTime",
+        "mean_abs_shap": 0.23042
+      },
+      {
+        "feature": "Creatinine_last",
+        "mean_abs_shap": 0.199788
+      },
+      {
+        "feature": "Temp_missing_frac_24h",
+        "mean_abs_shap": 0.12577
+      },
+      {
+        "feature": "Temp_last",
+        "mean_abs_shap": 0.125535
+      },
+      {
+        "feature": "WBC_last",
+        "mean_abs_shap": 0.124131
+      },
+      {
+        "feature": "Lactate_hours_since",
+        "mean_abs_shap": 0.106684
+      },
+      {
+        "feature": "Resp_mean_24h",
+        "mean_abs_shap": 0.10125
+      },
+      {
+        "feature": "Resp_mean_6h",
+        "mean_abs_shap": 0.101215
+      },
+      {
+        "feature": "Unit1",
+        "mean_abs_shap": 0.098374
+      },
+      {
+        "feature": "Alkalinephos_hours_since",
+        "mean_abs_shap": 0.088499
+      }
+    ]
+  }
+}

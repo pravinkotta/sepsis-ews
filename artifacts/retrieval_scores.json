@@ -1,0 +1,669 @@
+{
+  "k": 5,
+  "mrr": 0.916667,
+  "n_queries": 20,
+  "note": "Authored regression suite, not an unbiased benchmark. Retrieval only; RAGAS metrics require a keyed LLM run.",
+  "recall_at_k": 1.0,
+  "rows": [
+    {
+      "hit_at_k": true,
+      "id": "q01",
+      "query": "Should lactate be measured in suspected sepsis?",
+      "rank": 1,
+      "top_chunks": [
+        {
+          "chunk_id": "ssc-2021:0003",
+          "citation_id": "S1",
+          "score": 0.033333
+        },
+        {
+          "chunk_id": "ssc-2021:0006",
+          "citation_id": "S2",
+          "score": 0.032522
+        },
+        {
+          "chunk_id": "hour-1-bundle:0000",
+          "citation_id": "S3",
+          "score": 0.031025
+        },
+        {
+          "chunk_id": "hour-1-bundle:0001",
+          "citation_id": "S4",
+          "score": 0.030622
+        },
+        {
+          "chunk_id": "ssc-2021:0011",
+          "citation_id": "S5",
+          "score": 0.030366
+        }
+      ]
+    },
+    {
+      "hit_at_k": true,
+      "id": "q02",
+      "query": "Obtain blood cultures before administering antibiotics",
+      "rank": 1,
+      "top_chunks": [
+        {
+          "chunk_id": "ssc-2021:0009",
+          "citation_id": "S1",
+          "score": 0.032796
+        },
+        {
+          "chunk_id": "hour-1-bundle:0001",
+          "citation_id": "S2",
+          "score": 0.032018
+        },
+        {
+          "chunk_id": "hour-1-bundle:0000",
+          "citation_id": "S3",
+          "score": 0.031818
+        },
+        {
+          "chunk_id": "ssc-2021:0010",
+          "citation_id": "S4",
+          "score": 0.031754
+        },
+        {
+          "chunk_id": "ssc-2021:0012",
+          "citation_id": "S5",
+          "score": 0.030679
+        }
+      ]
+    },
+    {
+      "hit_at_k": true,
+      "id": "q03",
+      "query": "How quickly should antimicrobials be given in septic shock?",
+      "rank": 1,
+      "top_chunks": [
+        {
+          "chunk_id": "ssc-2021:0012",
+          "citation_id": "S1",
+          "score": 0.033333
+        },
+        {
+          "chunk_id": "ssc-2021:0010",
+          "citation_id": "S2",
+          "score": 0.032258
+        },
+        {
+          "chunk_id": "ssc-2021:0009",
+          "citation_id": "S3",
+          "score": 0.031545
+        },
+        {
+          "chunk_id": "ssc-2021:0011",
+          "citation_id": "S4",
+          "score": 0.031258
+        },
+        {
+          "chunk_id": "ssc-2021:0022",
+          "citation_id": "S5",
+          "score": 0.03125
+        }
+      ]
+    },
+    {
+      "hit_at_k": true,
+      "id": "q04",
+      "query": "How much crystalloid fluid for initial resuscitation?",
+      "rank": 1,
+      "top_chunks": [
+        {
+          "chunk_id": "hour-1-bundle:0000",
+          "citation_id": "S1",
+          "score": 0.03306
+        },
+        {
+          "chunk_id": "ssc-2021:0004",
+          "citation_id": "S2",
+          "score": 0.03306
+        },
+        {
+          "chunk_id": "ssc-2021:0027",
+          "citation_id": "S3",
+          "score": 0.032002
+        },
+        {
+          "chunk_id": "ssc-2021:0044",
+          "citation_id": "S4",
+          "score": 0.032002
+        },
+        {
+          "chunk_id": "hour-1-bundle:0001",
+          "citation_id": "S5",
+          "score": 0.030777
+        }
+      ]
+    },
+    {
+      "hit_at_k": true,
+      "id": "q05",
+      "query": "Dynamic measures of fluid responsiveness and passive leg raise",
+      "rank": 2,
+      "top_chunks": [
+        {
+          "chunk_id": "ssc-2021:0005",
+          "citation_id": "S1",
+          "score": 0.032522
+        },
+        {
+          "chunk_id": "ssc-2021:0043",
+          "citation_id": "S2",
+          "score": 0.032051
+        },
+        {
+          "chunk_id": "ssc-2021:0044",
+          "citation_id": "S3",
+          "score": 0.031754
+        },
+        {
+          "chunk_id": "ssc-2021:0004",
+          "citation_id": "S4",
+          "score": 0.031592
+        },
+        {
+          "chunk_id": "ssc-2021:0048",
+          "citation_id": "S5",
+          "score": 0.030886
+        }
+      ]
+    },
+    {
+      "hit_at_k": true,
+      "id": "q06",
+      "query": "What mean arterial pressure target should vasopressors aim for?",
+      "rank": 2,
+      "top_chunks": [
+        {
+          "chunk_id": "ssc-2021:0041",
+          "citation_id": "S1",
+          "score": 0.032522
+        },
+        {
+          "chunk_id": "ssc-2021:0007",
+          "citation_id": "S2",
+          "score": 0.030777
+        },
+        {
+          "chunk_id": "ssc-2021:0042",
+          "citation_id": "S3",
+          "score": 0.030077
+        },
+        {
+          "chunk_id": "ssc-2021:0048",
+          "citation_id": "S4",
+          "score": 0.028898
+        },
+        {
+          "chunk_id": "ssc-2021:0044",
+          "citation_id": "S5",
+          "score": 0.027047
+        }
+      ]
+    },
+    {
+      "hit_at_k": true,
+      "id": "q07",
+      "query": "Which vasopressor is first line in septic shock?",
+      "rank": 1,
+      "top_chunks": [
+        {
+          "chunk_id": "ssc-2021:0035",
+          "citation_id": "S1",
+          "score": 0.03254
+        },
+        {
+          "chunk_id": "ssc-2021:0036",
+          "citation_id": "S2",
+          "score": 0.032258
+        },
+        {
+          "chunk_id": "ssc-2021:0011",
+          "citation_id": "S3",
+          "score": 0.031099
+        },
+        {
+          "chunk_id": "ssc-2021:0037",
+          "citation_id": "S4",
+          "score": 0.030478
+        },
+        {
+          "chunk_id": "ssc-2021:0044",
+          "citation_id": "S5",
+          "score": 0.02901
+        }
+      ]
+    },
+    {
+      "hit_at_k": true,
+      "id": "q08",
+      "query": "When should source control be performed?",
+      "rank": 1,
+      "top_chunks": [
+        {
+          "chunk_id": "ssc-2021:0021",
+          "citation_id": "S1",
+          "score": 0.03306
+        },
+        {
+          "chunk_id": "ssc-2021:0020",
+          "citation_id": "S2",
+          "score": 0.03306
+        },
+        {
+          "chunk_id": "ssc-2021:0026",
+          "citation_id": "S3",
+          "score": 0.031754
+        },
+        {
+          "chunk_id": "ssc-2021:0067",
+          "citation_id": "S4",
+          "score": 0.029462
+        },
+        {
+          "chunk_id": "local-escalation-policy:0000",
+          "citation_id": "S5",
+          "score": 0.029031
+        }
+      ]
+    },
+    {
+      "hit_at_k": true,
+      "id": "q09",
+      "query": "Corticosteroids for refractory septic shock",
+      "rank": 1,
+      "top_chunks": [
+        {
+          "chunk_id": "ssc-2021:0056",
+          "citation_id": "S1",
+          "score": 0.03306
+        },
+        {
+          "chunk_id": "hour-1-bundle:0000",
+          "citation_id": "S2",
+          "score": 0.029857
+        },
+        {
+          "chunk_id": "ssc-2021:0033",
+          "citation_id": "S3",
+          "score": 0.029828
+        },
+        {
+          "chunk_id": "ssc-2021:0035",
+          "citation_id": "S4",
+          "score": 0.029387
+        },
+        {
+          "chunk_id": "ssc-2021:0000",
+          "citation_id": "S5",
+          "score": 0.028992
+        }
+      ]
+    },
+    {
+      "hit_at_k": true,
+      "id": "q10",
+      "query": "Red blood cell transfusion threshold in sepsis",
+      "rank": 1,
+      "top_chunks": [
+        {
+          "chunk_id": "ssc-2021:0058",
+          "citation_id": "S1",
+          "score": 0.033333
+        },
+        {
+          "chunk_id": "hour-1-bundle:0000",
+          "citation_id": "S2",
+          "score": 0.030622
+        },
+        {
+          "chunk_id": "ssc-2021:0023",
+          "citation_id": "S3",
+          "score": 0.029572
+        },
+        {
+          "chunk_id": "hour-1-bundle:0001",
+          "citation_id": "S4",
+          "score": 0.029551
+        },
+        {
+          "chunk_id": "ssc-2021:0006",
+          "citation_id": "S5",
+          "score": 0.028958
+        }
+      ]
+    },
+    {
+      "hit_at_k": true,
+      "id": "q11",
+      "query": "Lung protective ventilation tidal volume in sepsis",
+      "rank": 1,
+      "top_chunks": [
+        {
+          "chunk_id": "ssc-2021:0048",
+          "citation_id": "S1",
+          "score": 0.032796
+        },
+        {
+          "chunk_id": "ssc-2021:0052",
+          "citation_id": "S2",
+          "score": 0.032796
+        },
+        {
+          "chunk_id": "ssc-2021:0049",
+          "citation_id": "S3",
+          "score": 0.032018
+        },
+        {
+          "chunk_id": "ssc-2021:0044",
+          "citation_id": "S4",
+          "score": 0.030798
+        },
+        {
+          "chunk_id": "ssc-2021:0047",
+          "citation_id": "S5",
+          "score": 0.030478
+        }
+      ]
+    },
+    {
+      "hit_at_k": true,
+      "id": "q12",
+      "query": "Prone positioning for severe ARDS",
+      "rank": 1,
+      "top_chunks": [
+        {
+          "chunk_id": "ssc-2021:0053",
+          "citation_id": "S1",
+          "score": 0.033333
+        },
+        {
+          "chunk_id": "ssc-2021:0051",
+          "citation_id": "S2",
+          "score": 0.032018
+        },
+        {
+          "chunk_id": "ssc-2021:0050",
+          "citation_id": "S3",
+          "score": 0.031746
+        },
+        {
+          "chunk_id": "ssc-2021:0054",
+          "citation_id": "S4",
+          "score": 0.031514
+        },
+        {
+          "chunk_id": "ssc-2021:0048",
+          "citation_id": "S5",
+          "score": 0.030622
+        }
+      ]
+    },
+    {
+      "hit_at_k": true,
+      "id": "q13",
+      "query": "Glucose control and insulin in critically ill sepsis patients",
+      "rank": 1,
+      "top_chunks": [
+        {
+          "chunk_id": "ssc-2021:0064",
+          "citation_id": "S1",
+          "score": 0.033333
+        },
+        {
+          "chunk_id": "ssc-2021:0069",
+          "citation_id": "S2",
+          "score": 0.030777
+        },
+        {
+          "chunk_id": "ssc-2021:0068",
+          "citation_id": "S3",
+          "score": 0.030366
+        },
+        {
+          "chunk_id": "ssc-2021:0026",
+          "citation_id": "S4",
+          "score": 0.030214
+        },
+        {
+          "chunk_id": "ssc-2021:0070",
+          "citation_id": "S5",
+          "score": 0.027072
+        }
+      ]
+    },
+    {
+      "hit_at_k": true,
+      "id": "q14",
+      "query": "Venous thromboembolism prophylaxis",
+      "rank": 1,
+      "top_chunks": [
+        {
+          "chunk_id": "ssc-2021:0061",
+          "citation_id": "S1",
+          "score": 0.033333
+        },
+        {
+          "chunk_id": "ssc-2021:0062",
+          "citation_id": "S2",
+          "score": 0.032787
+        },
+        {
+          "chunk_id": "ssc-2021:0043",
+          "citation_id": "S3",
+          "score": 0.031754
+        },
+        {
+          "chunk_id": "ssc-2021:0042",
+          "citation_id": "S4",
+          "score": 0.030579
+        },
+        {
+          "chunk_id": "ssc-2021:0041",
+          "citation_id": "S5",
+          "score": 0.030366
+        }
+      ]
+    },
+    {
+      "hit_at_k": true,
+      "id": "q15",
+      "query": "Renal replacement therapy for sepsis associated acute kidney injury",
+      "rank": 3,
+      "top_chunks": [
+        {
+          "chunk_id": "ssc-2021:0027",
+          "citation_id": "S1",
+          "score": 0.033333
+        },
+        {
+          "chunk_id": "ssc-2021:0004",
+          "citation_id": "S2",
+          "score": 0.031754
+        },
+        {
+          "chunk_id": "ssc-2021:0063",
+          "citation_id": "S3",
+          "score": 0.030679
+        },
+        {
+          "chunk_id": "ssc-2021:0010",
+          "citation_id": "S4",
+          "score": 0.029083
+        },
+        {
+          "chunk_id": "ssc-2021:0052",
+          "citation_id": "S5",
+          "score": 0.026145
+        }
+      ]
+    },
+    {
+      "hit_at_k": true,
+      "id": "q16",
+      "query": "Enteral nutrition in critically ill patients with sepsis",
+      "rank": 1,
+      "top_chunks": [
+        {
+          "chunk_id": "ssc-2021:0068",
+          "citation_id": "S1",
+          "score": 0.03306
+        },
+        {
+          "chunk_id": "ssc-2021:0069",
+          "citation_id": "S2",
+          "score": 0.03306
+        },
+        {
+          "chunk_id": "ssc-2021:0026",
+          "citation_id": "S3",
+          "score": 0.029387
+        },
+        {
+          "chunk_id": "ssc-2021:0029",
+          "citation_id": "S4",
+          "score": 0.029206
+        },
+        {
+          "chunk_id": "ssc-2021:0008",
+          "citation_id": "S5",
+          "score": 0.029116
+        }
+      ]
+    },
+    {
+      "hit_at_k": true,
+      "id": "q17",
+      "query": "Antibiotic de-escalation and duration of therapy",
+      "rank": 1,
+      "top_chunks": [
+        {
+          "chunk_id": "ssc-2021:0022",
+          "citation_id": "S1",
+          "score": 0.033333
+        },
+        {
+          "chunk_id": "ssc-2021:0026",
+          "citation_id": "S2",
+          "score": 0.032266
+        },
+        {
+          "chunk_id": "ssc-2021:0016",
+          "citation_id": "S3",
+          "score": 0.030622
+        },
+        {
+          "chunk_id": "ssc-2021:0015",
+          "citation_id": "S4",
+          "score": 0.030536
+        },
+        {
+          "chunk_id": "ssc-2021:0018",
+          "citation_id": "S5",
+          "score": 0.030118
+        }
+      ]
+    },
+    {
+      "hit_at_k": true,
+      "id": "q18",
+      "query": "Timing of ICU admission for sepsis",
+      "rank": 1,
+      "top_chunks": [
+        {
+          "chunk_id": "ssc-2021:0008",
+          "citation_id": "S1",
+          "score": 0.032522
+        },
+        {
+          "chunk_id": "ssc-2021:0009",
+          "citation_id": "S2",
+          "score": 0.031592
+        },
+        {
+          "chunk_id": "ssc-2021:0078",
+          "citation_id": "S3",
+          "score": 0.031498
+        },
+        {
+          "chunk_id": "ssc-2021:0069",
+          "citation_id": "S4",
+          "score": 0.029469
+        },
+        {
+          "chunk_id": "ssc-2021:0012",
+          "citation_id": "S5",
+          "score": 0.02904
+        }
+      ]
+    },
+    {
+      "hit_at_k": true,
+      "id": "q19",
+      "query": "SBAR escalation to the rapid response team",
+      "rank": 1,
+      "top_chunks": [
+        {
+          "chunk_id": "local-escalation-policy:0000",
+          "citation_id": "S1",
+          "score": 0.033333
+        },
+        {
+          "chunk_id": "ssc-2021:0063",
+          "citation_id": "S2",
+          "score": 0.029907
+        },
+        {
+          "chunk_id": "ssc-2021:0021",
+          "citation_id": "S3",
+          "score": 0.029437
+        },
+        {
+          "chunk_id": "ssc-2021:0000",
+          "citation_id": "S4",
+          "score": 0.029236
+        },
+        {
+          "chunk_id": "ssc-2021:0022",
+          "citation_id": "S5",
+          "score": 0.029052
+        }
+      ]
+    },
+    {
+      "hit_at_k": true,
+      "id": "q20",
+      "query": "Human approval token before paging rapid response",
+      "rank": 1,
+      "top_chunks": [
+        {
+          "chunk_id": "local-escalation-policy:0001",
+          "citation_id": "S1",
+          "score": 0.03306
+        },
+        {
+          "chunk_id": "local-escalation-policy:0000",
+          "citation_id": "S2",
+          "score": 0.030952
+        },
+        {
+          "chunk_id": "ssc-2021:0071",
+          "citation_id": "S3",
+          "score": 0.029631
+        },
+        {
+          "chunk_id": "hour-1-bundle:0001",
+          "citation_id": "S4",
+          "score": 0.02886
+        },
+        {
+          "chunk_id": "ssc-2021:0004",
+          "citation_id": "S5",
+          "score": 0.026857
+        }
+      ]
+    }
+  ]
+}

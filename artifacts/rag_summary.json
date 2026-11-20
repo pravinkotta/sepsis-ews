@@ -1,0 +1,15 @@
+{
+  "built_at": "2026-11-19T16:46:14Z",
+  "chunk_overlap": 50,
+  "chunk_tokens": 512,
+  "documents": [
+    "hour-1-bundle",
+    "local-escalation-policy",
+    "ssc-2021"
+  ],
+  "duration_seconds": 37.6,
+  "embedder": "minilm",
+  "embedding_dim": 384,
+  "n_chunks": 87,
+  "n_documents": 3
+}

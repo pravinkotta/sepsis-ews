@@ -1,0 +1,11 @@
+{
+  "champion": "lightgbm",
+  "champion_version": 1,
+  "gru": {
+    "run_id": "a727f230d94a4121bdbd3eb97c4f84b0"
+  },
+  "lightgbm": {
+    "run_id": "72c12945e5a9492999beb0478bf9d651"
+  },
+  "tracking_uri": "sqlite:///C:/Users/pravi/Documents/Default Project/sepsis-ews/artifacts/mlflow.db"
+}

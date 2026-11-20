@@ -1,0 +1,15 @@
+data/
+tests/
+mlruns/
+mlflow.db
+artifacts/mlflow.db
+artifacts/drift_report.html
+artifacts/*.jsonl
+artifacts/demo_run.json
+.git/
+.venv/
+__pycache__/
+**/__pycache__/
+.pytest_cache/
+.ruff_cache/
+.env

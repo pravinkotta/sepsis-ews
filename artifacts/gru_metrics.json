@@ -1,0 +1,150 @@
+{
+  "auprc": 0.034319,
+  "auroc": 0.734139,
+  "calibration": {
+    "brier": 0.017276,
+    "slope": 0.847432
+  },
+  "duration_seconds": 247.9,
+  "hidden": 64,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.297092,
+      "val_auprc": 0.079356,
+      "val_auroc": 0.718831
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.219511,
+      "val_auprc": 0.085818,
+      "val_auroc": 0.737597
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.168142,
+      "val_auprc": 0.097543,
+      "val_auroc": 0.771478
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.10864,
+      "val_auprc": 0.105066,
+      "val_auroc": 0.775907
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.061911,
+      "val_auprc": 0.108335,
+      "val_auroc": 0.782301
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.030135,
+      "val_auprc": 0.107144,
+      "val_auroc": 0.78028
+    },
+    {
+      "epoch": 7,
+      "train_loss": 1.001367,
+      "val_auprc": 0.109747,
+      "val_auroc": 0.778494
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.963197,
+      "val_auprc": 0.110113,
+      "val_auroc": 0.783817
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.951161,
+      "val_auprc": 0.108071,
+      "val_auroc": 0.770969
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.916209,
+      "val_auprc": 0.10755,
+      "val_auroc": 0.776053
+    }
+  ],
+  "integrated_gradients": {
+    "completeness_max_diff": 0.01656055,
+    "completeness_mean_diff": 0.00295503,
+    "method": "integrated_gradients",
+    "n_sample": 128,
+    "steps": 64,
+    "top_features": [
+      {
+        "feature": "Hct_last",
+        "mean_abs_ig": 0.44784
+      },
+      {
+        "feature": "SBP_last",
+        "mean_abs_ig": 0.436605
+      },
+      {
+        "feature": "Potassium_last",
+        "mean_abs_ig": 0.379973
+      },
+      {
+        "feature": "Temp_last",
+        "mean_abs_ig": 0.352727
+      },
+      {
+        "feature": "Resp_last",
+        "mean_abs_ig": 0.336151
+      },
+      {
+        "feature": "WBC_last",
+        "mean_abs_ig": 0.287004
+      },
+      {
+        "feature": "Platelets_last",
+        "mean_abs_ig": 0.27898
+      },
+      {
+        "feature": "SaO2_last",
+        "mean_abs_ig": 0.255891
+      },
+      {
+        "feature": "O2Sat_last",
+        "mean_abs_ig": 0.233909
+      },
+      {
+        "feature": "HR_last",
+        "mean_abs_ig": 0.230283
+      },
+      {
+        "feature": "BUN_last",
+        "mean_abs_ig": 0.219423
+      },
+      {
+        "feature": "Magnesium_last",
+        "mean_abs_ig": 0.21238
+      }
+    ]
+  },
+  "model": "gru",
+  "n_hours": 232887,
+  "n_test_patients": 6050,
+  "n_test_windows": 234431,
+  "policy": {
+    "alerts_per_patient_day": 1.4967,
+    "median_lead_hours": 7.0,
+    "n_alerts": 14620,
+    "n_early_detected": 334,
+    "n_eligible": 369,
+    "n_late": 0,
+    "n_missed": 24,
+    "n_on_time": 11,
+    "n_patients": 6050,
+    "patient_days": 9767.96,
+    "sensitivity": 0.9051,
+    "threshold": 0.01
+  },
+  "prevalence": 0.01131,
+  "val_auprc": 0.044301,
+  "val_auroc": 0.758425
+}

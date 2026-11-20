@@ -1,0 +1,12 @@
+{
+  "base": "https://hapi.fhir.org/baseR4",
+  "delivered": true,
+  "detail": {
+    "communication_id": "854763",
+    "create_status": 201,
+    "note_sha256": "18420203c14bbee9",
+    "patient_id": "sepsis-demo-f26c3166",
+    "readback_status": 200
+  },
+  "transport": "fhir"
+}

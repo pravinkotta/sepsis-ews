@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sepsis EWS — review workbench</title>
+<style>
+  :root { color-scheme: light; --bg:#f6f7f9; --card:#fff; --ink:#17202a; --muted:#5b6770;
+          --line:#d9dee3; --accent:#0b6b5d; --warn:#8a4b00; --danger:#a4161a; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:15px/1.5 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+         background:var(--bg); color:var(--ink); }
+  header { background:#102a2f; color:#fff; padding:18px 24px; }
+  header h1 { margin:0; font-size:20px; letter-spacing:.2px; }
+  header p { margin:4px 0 0; color:#c9d7d9; font-size:13px; }
+  main { max-width:1100px; margin:22px auto; padding:0 18px 40px;
+         display:grid; gap:16px; grid-template-columns: 360px 1fr; }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; } }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px; }
+  .card h2 { margin:0 0 10px; font-size:15px; text-transform:uppercase;
+             letter-spacing:.08em; color:var(--muted); }
+  label { display:block; font-size:13px; color:var(--muted); margin:10px 0 4px; }
+  input { width:100%; padding:9px 10px; border:1px solid var(--line); border-radius:7px;
+          font:inherit; background:#fff; }
+  button { margin-top:10px; padding:9px 13px; border-radius:7px; border:1px solid var(--accent);
+           background:var(--accent); color:#fff; font:inherit; cursor:pointer; }
+  button.secondary { background:#fff; color:var(--accent); }
+  button:disabled { opacity:.55; cursor:default; }
+  button.done { opacity:1; background:#e8f3f1; color:#0b5c51;
+                border-color:#0b6b5d; cursor:default; }
+  .banner { border-left:4px solid var(--warn); background:#fff7e8; padding:10px 12px;
+            border-radius:6px; color:#553000; font-size:13px; }
+  .risk { font-size:40px; font-weight:700; color:var(--accent); line-height:1.1; }
+  .muted { color:var(--muted); font-size:13px; }
+  .row { display:flex; gap:8px; flex-wrap:wrap; }
+  .pill { display:inline-block; padding:2px 8px; border-radius:999px; background:#e8f3f1;
+          color:#0b5c51; font-size:12px; margin:2px 4px 2px 0; }
+  .sbar div { margin:8px 0; }
+  .sbar b { color:var(--accent); }
+  pre { white-space:pre-wrap; word-break:break-word; background:#f2f4f6; padding:10px;
+        border-radius:7px; font-size:12px; max-height:260px; overflow:auto; }
+  .status { margin-top:10px; font-size:13px; min-height:20px; }
+  .ok { color:var(--accent); } .err { color:var(--danger); }
+  .full { grid-column:1 / -1; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Sepsis Early-Warning &amp; Escalation Copilot</h1>
+  <p>Review workbench · demo transport · the model proposes, a clinician decides</p>
+</header>
+
+<main>
+  <section class="card">
+    <h2>Case</h2>
+    <div class="banner">Research demo. Not clinical guidance. No real pager or EHR is contacted.</div>
+    <label for="patient">Patient id</label>
+    <input id="patient" value="p000206" autocomplete="off" />
+    <label for="hour">ICU hour</label>
+    <input id="hour" type="number" value="15" min="1" />
+    <div class="row">
+      <button id="scoreBtn">Score</button>
+      <button id="runBtn" class="secondary">Run agent</button>
+    </div>
+    <div id="status" class="status"></div>
+  </section>
+
+  <section class="card">
+    <h2>Risk</h2>
+    <div id="risk" class="risk">—</div>
+    <div id="riskMeta" class="muted"></div>
+    <div id="drivers" class="row"></div>
+  </section>
+
+  <section class="card full">
+    <h2>SBAR draft</h2>
+    <div id="sbar" class="sbar muted">Run the agent to draft a cited SBAR.</div>
+    <div id="validation" class="muted"></div>
+    <pre id="citations" hidden></pre>
+  </section>
+
+  <section class="card full">
+    <h2>Human approval</h2>
+    <div class="banner" id="authBanner">Approval requires the clinician API key. The token is kept in this page's memory only.</div>
+    <div id="authLine" class="muted"></div>
+    <div id="keyBlock">
+      <label for="apiKey">Clinician API key</label>
+      <input id="apiKey" type="password" placeholder="X-API-Key" autocomplete="off" />
+      <label for="approver">Approver</label>
+      <input id="approver" value="demo.clinician" autocomplete="off" />
+    </div>
+    <div class="row">
+      <button id="approvePageBtn" class="secondary" disabled>Approve page</button>
+      <button id="pageBtn" disabled>Page rapid response</button>
+      <button id="approveEhrBtn" class="secondary" disabled>Approve EHR note</button>
+      <button id="ehrBtn" disabled>Write EHR note</button>
+    </div>
+    <div id="approvalStatus" class="status"></div>
+    <div id="ehrLink" class="muted"></div>
+  </section>
+</main>
+
+<script>
+const $ = (id) => document.getElementById(id);
+let current = {
+  alertId: null, patientId: null, hour: null, user: null,
+  tokens: { page: null, ehr: null }
+};
+let authMode = "apikey";
+
+function setStatus(el, text, ok) {
+  el.textContent = text;
+  el.className = "status " + (ok ? "ok" : "err");
+}
+
+async function callJson(url, options) {
+  const response = await fetch(url, options);
+  let payload = null;
+  try { payload = await response.json(); } catch (e) { payload = { detail: "non-JSON response" }; }
+  if (!response.ok) {
+    throw new Error(payload.detail ? JSON.stringify(payload.detail) : "HTTP " + response.status);
+  }
+  return payload;
+}
+
+async function score() {
+  const patientId = $("patient").value.trim();
+  const hour = Number($("hour").value);
+  setStatus($("status"), "Scoring…", true);
+  try {
+    const result = await callJson("/score", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ patient_id: patientId, as_of_hour: hour })
+    });
+    $("risk").textContent = (100 * result.risk).toFixed(2) + "%";
+    $("riskMeta").textContent =
+      "threshold " + (100 * result.threshold).toFixed(2) + "% · model " + (result.model || "lightgbm");
+    $("drivers").replaceChildren(...(result.top_drivers || []).map((d) => {
+      const span = document.createElement("span");
+      span.className = "pill";
+      const value = d.value === null || d.value === undefined ? "" : "=" + d.value;
+      span.textContent = d.feature + value + " (" + d.direction + ")";
+      return span;
+    }));
+    setStatus($("status"), "Scored.", true);
+  } catch (error) {
+    setStatus($("status"), "Score failed: " + error.message, false);
+  }
+}
+
+async function runAgent() {
+  const patientId = $("patient").value.trim();
+  const hour = Number($("hour").value);
+  setStatus($("status"), "Running agent…", true);
+  try {
+    const state = await callJson("/agent/run", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ patient_id: patientId, as_of_hour: hour })
+    });
+    current.alertId = state.alert_id || null;
+    current.patientId = patientId;
+    current.hour = hour;
+    current.tokens = { page: null, ehr: null };
+    $("ehrLink").replaceChildren();
+    $("approvePageBtn").disabled = !current.alertId;
+    $("approveEhrBtn").disabled = !current.alertId;
+    for (const [id, label] of [["pageBtn", "Page rapid response"],
+                               ["ehrBtn", "Write EHR note"]]) {
+      const button = $(id);
+      button.textContent = label;
+      button.classList.remove("done");
+      button.disabled = true;
+    }
+
+    if (state.sbar) {
+      $("sbar").replaceChildren(...["situation", "background", "assessment", "recommendation"].map((key) => {
+        const div = document.createElement("div");
+        const label = document.createElement("b");
+        label.textContent = key.toUpperCase() + ": ";
+        div.append(label, document.createTextNode(state.sbar[key] || ""));
+        return div;
+      }));
+    } else {
+      $("sbar").textContent = "No draft: " + (state.status || "unknown") + " — " + (state.reason || "");
+    }
+    const validation = state.validation || {};
+    $("validation").textContent =
+      "Validator: " + (validation.status || "n/a") +
+      (validation.flags && validation.flags.length ? " · " + validation.flags.join(", ") : "");
+    const citations = state.chunks || state.citations || [];
+    if (citations.length) {
+      $("citations").hidden = false;
+      $("citations").textContent = citations.map((c) =>
+        "[" + c.citation_id + "] " + c.doc + " — " + (c.source || "")
+      ).join("\n");
+    } else {
+      $("citations").hidden = true;
+    }
+    setStatus($("status"), "Agent status: " + (state.status || "unknown"), true);
+  } catch (error) {
+    setStatus($("status"), "Agent failed: " + error.message, false);
+  }
+}
+
+async function approve(tool) {
+  if (!current.alertId) return;
+  const apiKey = $("apiKey").value;
+  const approver = $("approver").value.trim();
+  const headers = { "Content-Type": "application/json" };
+  if (authMode !== "proxy") headers["X-API-Key"] = apiKey;
+  const body = { patient_id: current.patientId, tool };
+  if (authMode !== "proxy") body.approver = approver;
+  const label = tool === "write_ehr_note" ? "EHR note" : "page";
+  setStatus($("approvalStatus"), "Approving " + label + "…", true);
+  try {
+    const result = await callJson("/alerts/" + encodeURIComponent(current.alertId) + "/approve", {
+      method: "POST",
+      headers,
+      body: JSON.stringify(body)
+    });
+    const slot = tool === "write_ehr_note" ? "ehr" : "page";
+    current.tokens[slot] = result.approval_token;
+    const action = $(slot === "ehr" ? "ehrBtn" : "pageBtn");
+    action.textContent = slot === "ehr" ? "Write EHR note" : "Page rapid response";
+    action.classList.remove("done");
+    action.disabled = !current.tokens[slot];
+    const who = current.user || approver;
+    setStatus($("approvalStatus"),
+      "Approved " + label + " by " + who + ". Token minted (not displayed), expires in " +
+      result.expires_in_seconds + " s.", true);
+  } catch (error) {
+    setStatus($("approvalStatus"), "Approval failed: " + error.message, false);
+  }
+}
+
+async function executeWrite(tool) {
+  const slot = tool === "write_ehr_note" ? "ehr" : "page";
+  const token = current.tokens[slot];
+  if (!current.alertId || !token) return;
+  const endpoint = tool === "write_ehr_note" ? "ehr-note" : "page";
+  const label = tool === "write_ehr_note" ? "Writing EHR note…" : "Paging…";
+  setStatus($("approvalStatus"), label, true);
+  try {
+    const result = await callJson(
+      "/alerts/" + encodeURIComponent(current.alertId) + "/" + endpoint,
+      {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ patient_id: current.patientId, approval_token: token })
+      }
+    );
+    current.tokens[slot] = null;
+    const action = $(slot === "ehr" ? "ehrBtn" : "pageBtn");
+    action.disabled = true;
+    const verb = tool === "write_ehr_note" ? "EHR note" : "Page";
+    if (result.delivered) {
+      action.classList.add("done");
+      action.textContent = slot === "ehr" ? "EHR note written ✓" : "Paged ✓";
+      if (tool === "write_ehr_note" && result.transport === "fhir" &&
+          result.delivery && result.delivery.resource_url) {
+        const link = document.createElement("a");
+        link.href = result.delivery.resource_url;
+        link.target = "_blank";
+        link.rel = "noopener";
+        link.textContent = "Open EHR note in the FHIR sandbox →";
+        $("ehrLink").replaceChildren(link);
+      }
+      setStatus($("approvalStatus"),
+        verb + " delivered via " + result.transport + " · token consumed. " +
+        "Re-approve to send again.", true);
+    } else {
+      action.classList.remove("done");
+      action.textContent = slot === "ehr" ? "EHR write failed" : "Page failed";
+      setStatus($("approvalStatus"),
+        verb + " failed via " + result.transport + " · " +
+        JSON.stringify(result.delivery || {}), false);
+    }
+  } catch (error) {
+    setStatus($("approvalStatus"), "Write failed: " + error.message, false);
+  }
+}
+
+async function loadIdentity() {
+  try {
+    const me = await callJson("/me", { method: "GET" });
+    authMode = me.auth_mode || "apikey";
+    current.user = me.user || null;
+    if (authMode === "proxy") {
+      $("keyBlock").style.display = "none";
+      $("authBanner").textContent =
+        "Signed in through the clinician identity proxy. The approval token is bound to your verified identity.";
+      $("authLine").textContent = me.user ? "Signed in as " + me.user : "";
+    } else {
+      $("authLine").textContent = "Local demo: shared clinician API key.";
+    }
+  } catch (error) {
+    $("authLine").textContent = "Identity check failed: " + error.message;
+  }
+}
+
+$("scoreBtn").addEventListener("click", score);
+$("runBtn").addEventListener("click", runAgent);
+$("approvePageBtn").addEventListener("click", () => approve("page_rapid_response"));
+$("approveEhrBtn").addEventListener("click", () => approve("write_ehr_note"));
+$("pageBtn").addEventListener("click", () => executeWrite("page_rapid_response"));
+$("ehrBtn").addEventListener("click", () => executeWrite("write_ehr_note"));
+loadIdentity();
+</script>
+</body>
+</html>

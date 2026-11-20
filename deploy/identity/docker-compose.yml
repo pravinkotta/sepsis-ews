@@ -1,0 +1,36 @@
+services:
+  dex:
+    image: ghcr.io/dexidp/dex:v2.41.1
+    command: ["dex", "serve", "/etc/dex/config.yaml"]
+    volumes:
+      - ./dex.yaml:/etc/dex/config.yaml:ro
+    ports:
+      - "5556:5556"
+    restart: unless-stopped
+
+  sepsis-ews:
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+    env_file:
+      - ../../.env
+    environment:
+      SEPSIS_AUTH_MODE: proxy
+      SEPSIS_USE_LLM: "1"
+    volumes:
+      - ../../src:/app/src:ro
+    expose:
+      - "8000"
+    restart: unless-stopped
+
+  oauth2-proxy:
+    image: quay.io/oauth2-proxy/oauth2-proxy:v7.6.0
+    command: ["--config=/etc/oauth2-proxy.cfg"]
+    volumes:
+      - ./oauth2-proxy.cfg:/etc/oauth2-proxy.cfg:ro
+    depends_on:
+      - dex
+      - sepsis-ews
+    ports:
+      - "8011:4180"
+    restart: unless-stopped

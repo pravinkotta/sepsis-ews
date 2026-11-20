@@ -1,0 +1,222 @@
+{
+  "case": {
+    "patient_id": "p000206",
+    "as_of_hour": 15
+  },
+  "state": {
+    "patient_id": "p000206",
+    "as_of_hour": 15,
+    "risk": 0.039118,
+    "threshold": 0.006174343975952555,
+    "drivers": [
+      {
+        "feature": "SBP_last",
+        "contribution": 0.466523,
+        "direction": "increases",
+        "value": null
+      },
+      {
+        "feature": "HR_mean_24h",
+        "contribution": 0.45747,
+        "direction": "increases",
+        "value": 101.786
+      },
+      {
+        "feature": "SBP_mean_24h",
+        "contribution": 0.227608,
+        "direction": "increases",
+        "value": null
+      },
+      {
+        "feature": "Creatinine_last",
+        "contribution": 0.227578,
+        "direction": "increases",
+        "value": 5.1
+      },
+      {
+        "feature": "HospAdmTime",
+        "contribution": 0.190325,
+        "direction": "increases",
+        "value": -0.02
+      }
+    ],
+    "facts": {
+      "HR": 109.0,
+      "O2Sat": 92.0,
+      "Temp": 36.22,
+      "MAP": 84.0,
+      "Resp": 21.0,
+      "creatinine": 5.1,
+      "WBC": 7.4,
+      "platelets": 75.0,
+      "BUN": 108.0
+    },
+    "chunks": [
+      {
+        "citation_id": "S1",
+        "chunk_id": "hour-1-bundle:0001",
+        "doc": "hour-1-bundle",
+        "title": "Surviving Sepsis Campaign Hour-1 Bundle",
+        "text": ") Measure lactate level.* 2) Obtain blood cultures before administering antibiotics. 3) Administer broad-spectrum antibiotics. 4) Begin rapid administration of 30mL/kg crystalloid for hypotension or lactate \u22654 mmol/L. 5) Apply vasopressors if hypotensive during or after fluid resuscitation to maintain a mean arterial pressure \u2265 65 mm Hg. *Remeasure lactate if initial lactate elevated (> 2 mmol/L). BUNDLE \u00a9 2019 the Society of Critical Care Medicine and the European Society of Intensive Care Medicine. All Rights Reserved. survivingsepsis.org SCCM_SepsisBundleCard_die cut_1-11-19.indd 1 1/11/19 3:56 PM survivingsepsis.org 1. *Act quickly upon sepsis & septic shock recognition 2. Minimize time to treatment - sepsis & septic shock are medical emergencies 3. Monitor closely for response to interventions 4. Communicate sepsis status in hand-offs *All elements of the Hour-1 bundle may or may not be completed in the first hour after sepsis recognition SCCM_SepsisBundleCard_die cut_1-11-19.indd 2 1/11/19 3:56 PM",
+        "source": "https://sccm.org/SCCM/media/SCCM/PDFs/Surviving-Sepsis-Campaign-Hour-1-Bundle.pdf",
+        "score": 0.032266
+      },
+      {
+        "citation_id": "S2",
+        "chunk_id": "hour-1-bundle:0000",
+        "doc": "hour-1-bundle",
+        "title": "Surviving Sepsis Campaign Hour-1 Bundle",
+        "text": "# Surviving Sepsis Campaign Hour-1 Bundle\n\nInitial Resuscitation for Sepsis and Septic Shock \u00a9 2019 the Society of Critical Care Medicine and the European Society of Intensive Care Medicine. All Rights Reserved. Hour-1 Bundle Measure lactate level. Remeasure lactate if initial lactate elevated (> 2 mmol/L). Obtain blood cultures before administering antibiotics. Administer broad- spectrum antibiotics. Begin rapid administration of 30 mL/kg crystalloid for hypotension or lactate \u2265 4 mmol/L. Apply vasopressors if hypotensive during or after fluid resuscitation to maintain a mean arterial pressure \u2265 65 mm Hg. Bundle: SurvivingSepsis.org/Bundle Complete Guidelines: SurvivingSepsis.org/Guidelines Initiate bundle upon recognition of sepsis/septic shock. May not complete all bundle elements within one hour of recognition. MEDICAL EMERGENCY ! HOUR-1 BUNDLE: INITIAL RESUSCITATION FOR SEPSIS AND SEPTIC SHOCK: 1) Measure lactate level.* 2) Obtain blood cultures before administering antibiotics. 3) Administer broad-spectrum antibiotics. 4) Begin rapid administration of 30mL/kg crystalloid for hypotension or lactate \u22654 mmol/L. 5) Apply vasopressors if hypotensive during or after fluid resuscitation to maintain a mean arterial pressure \u2265 65 mm Hg. *Remeasure lactate if initial lactate elevated (> 2 mmol/L). BUNDLE \u00a9 2019 the Society of Critical Care Medicine and the European Society of Intensive Care Medicine. All Rights Reserved. survivingsepsis.org survivingsepsis.org 1. *Act quickly upon sepsis & septic shock recognition 2. Minimize time to treatment - sepsis & septic shock are medical emergencies 3. Monitor closely for response to interventions 4. Communicate sepsis status in hand-offs *All elements of the Hour-1 bundle may or may not be completed in the first hour after sepsis recognition HOUR-1 BUNDLE: INITIAL RESUSCITATION FOR SEPSIS AND SEPTIC SHOCK: 1) Measure lactate level.* 2) Obtain blood cultures before administering antibiotics. 3) Administer broad-spectrum antibiotics. 4) Begin rapid administration of 30mL/kg crystalloid for hypotension or lactate \u22654 mm",
+        "source": "https://sccm.org/SCCM/media/SCCM/PDFs/Surviving-Sepsis-Campaign-Hour-1-Bundle.pdf",
+        "score": 0.032258
+      },
+      {
+        "citation_id": "S3",
+        "chunk_id": "ssc-2021:0006",
+        "doc": "ssc-2021",
+        "title": "Surviving sepsis campaign: international guidelines for management of sepsis and septic shock 2021",
+        "text": "related to goal-directed therapy and meta-analyses of multiple studies targeting reductions in serum lactate in comparison to \u201cstandard care\u201d or increases in central venous oxygen saturation [ , ]. The panel recognises that normal serum lactate levels are not achievable in all patients with septic shock, but these studies support resuscitative strategies that decrease lactate toward normal. Serum lactate level should be interpreted considering the clinical context and other causes of elevated lactate. As with sepsis screening, lactate measurement may not always be available in some resource-limited settings.\n\nWhen advanced haemodynamic monitoring is not available, alternative measures of organ perfusion may be used to evaluate the effectiveness and safety of volume administration. Temperature of the extremities, skin mottling and capillary refill time (CRT) have been validated and shown to be reproducible signs of tissue perfusion [ , ]. The ANDROMEDA-SHOCK study evaluated whether a resuscitation strategy targeting CRT normalisation was more effective than a resuscitation strategy aiming at normalisation or decreasing lactate levels by 20% every 2 h in the first 8 h of septic shock [ ]. At day 3, the CRT group had significantly less organ dysfunction as assessed by SOFA score [mean SOFA score 5.6 (SD 4.3) versus 6.6 (SD 4.7); p = 0.045]. 28-day mortality was 34.9% in the peripheral perfusion group and 43.4% in the lactate group, but this difference did not reach statistical significance (HR 0.75; 95% CI 0.55\u20131.02). Despite the absence of a clear effect on mortality, using CRT during resuscitation has physiologic plausibility and is easily performed, non-invasive, and no cost. However, this approach should be augmented by careful, frequent, and comprehensive patient evaluation to predict or recognise fluid overload early, particularly where critical care resources are constrained. Relevant consideration of the background pathology or pathological processes pertinent to the patient should also inform management [ , ].\n\n### Mean arterial pressure\n\n### Rationale\n\nMAP is a key determinant of mean systemic filling pressure, which in turn, is the major driver of venous return and CO. Increasing MAP therefore usually results in increased tissue blood flow and augments the supply side of tissue perfusion. While some tissues, such as the brain and kidneys have the ability to auto-regulate blood flow, MAPs",
+        "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8486643/",
+        "score": 0.032051
+      },
+      {
+        "citation_id": "S4",
+        "chunk_id": "local-escalation-policy:0000",
+        "doc": "local-escalation-policy",
+        "title": "Project-local escalation policy",
+        "text": "# Project-local escalation policy (authored artefact)\n\n> **Status:** authored for this case study. It is **not** clinical guidance and\n> has not been approved by any hospital. It exists so the retrieval corpus has a\n> concrete escalation procedure to cite alongside the SSC guideline.\n\n## 1. Trigger\n\nEscalate when the calibrated sepsis risk is at or above the deployed threshold,\nor when a bedside clinician is concerned regardless of the score. The model is a\nscreening aid; clinician concern overrides it.\n\n## 2. SBAR structure\n\nEvery escalation draft contains four sections:\n\n- **Situation** \u2014 who the patient is, the current hour, the calibrated risk and\n  the top model drivers.\n- **Background** \u2014 objective facts available at that hour: vitals, lactate,\n  cultures, antibiotics, fluids, and relevant history.\n- **Assessment** \u2014 whether the risk and facts are concerning for evolving\n  sepsis, with the guideline citation that supports the statement.\n- **Recommendation** \u2014 what a clinician should consider, citing the local policy\n  or the guideline. The draft may recommend *considering* an action; it may not\n  issue a treatment order.\n\n## 3. Human approval\n\nThe agent may draft and propose. It may not page, order, or write to the EHR.\nA rapid-response page requires a human approval token minted after a clinician\nconfirms the specific alert. The token is bound to one alert, one patient and\none tool, expires in 15 minutes, and is consumed once. The model never sees the\nsigning secret.\n\n## 4. Escalation tiers\n\n1. **Bedside review** \u2014 the assigned nurse or clinician reviews the draft.\n2. **Rapid response** \u2014 if the clinician confirms, the approved token releases a\n   page to the rapid-response team.\n3. **ICU transfer** \u2014 a separate clinical decision; this system has no tool for\n   admission or transfer.\n\n## 5. Documentation and audit\n\nEvery tool call, approval, denial, and page is appended to the audit log. Note\ntext is hashed rather than copied into the log. A rejected draft is kept with\nthe reason so the prompt and retrieval can be reviewed.\n\n## 6. Hard prohibitions\n\n- No autonomous antibiotic, fluid, vasopressor, or culture order.\n- No autonomous ICU admission, discharge, or alert suppression.",
+        "source": "authored in this repository",
+        "score": 0.032051
+      },
+      {
+        "citation_id": "S5",
+        "chunk_id": "ssc-2021:0022",
+        "doc": "ssc-2021",
+        "title": "Surviving sepsis campaign: international guidelines for management of sepsis and septic shock 2021",
+        "text": "the development of antimicrobial resistance and efforts to reduce both the number of antibiotics administered and their spectrum of therapy are therefore important strategies in patients with sepsis and septic shock [ ]. This is particularly relevant in empiric therapy where broad-spectrum therapy is recommended, as the causative pathogen has not yet been identified. Once both the pathogen(s) and susceptibilities are known, antimicrobial de-escalation\u2014i.e. stopping an antimicrobial that is no longer necessary (in case of combination therapy) or changing an antimicrobial to narrow the spectrum is encouraged. Given the adverse societal and individual risks to continued unnecessary antimicrobial therapy, thoughtful de-escalation of antimicrobials based on adequate clinical improvement is appropriate even if cultures are negative. Early discontinuation of all antimicrobial therapy if infection is ruled out is advisable [ ]. Antimicrobial de-escalation should ideally be done as soon as possible, and rapid diagnostic techniques may facilitate this.\n\nWe identified direct evidence from 13 studies (1968 patients) [ ], including 1 RCT [ ]. In our meta-analysis, we observed improved short-term mortality in patients who were de-escalated (RR 0.72; 95% CI 0.57\u20130.91) (Supplementary Appendix 2). Long-term mortality was evaluated in one study only and did not demonstrate a difference (RR 0.99; 95% CI 0.64\u20131.52). De-escalation was associated with shorter length of stay in the hospital (MD \u22125.56 days; 95% CI \u22127.68 to \u22123.44), but not in the ICU (MD \u22122.6 days; 95% CI \u22125.91 to 0.72).\n\nMost studies were observational, and there are concerns that de-escalation is used primarily in patients who are getting better, which is why the reported improved short-term mortality should be interpreted with caution [ , ].\n\nDe-escalation is in generally safe, may offer cost savings when unnecessary antibiotics are discontinued, and reduced risk of antimicrobial resistance and reduced toxicity and side-effects may be important [ ]. Based on the overall very low quality of evidence, RCTs are warranted along with more studies on antimicrobial resistance.\n\n### Duration of antibiotics\n\n### Rationale\n\nRestricting antimicrobial therapy to the shortest course associated with better outcomes is an important part of antimicrobial stewardship [ \u2013 ]. The optimal duration of antimicrobial therapy for a given patient with seps",
+        "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8486643/",
+        "score": 0.03055
+      }
+    ],
+    "query": "sepsis SBP_last HR_mean_24h SBP_mean_24h escalation",
+    "sbar": {
+      "situation": "Patient p000206 is currently in the ICU at hour 15 with a calibrated sepsis risk of 0.0391, which is above the operating threshold of 0.0062. Top model drivers include elevated heart rate and creatinine levels.",
+      "background": "The patient's vital signs include a heart rate of 109.0, O2 saturation of 92.0, temperature of 36.22, mean arterial pressure of 84.0, respiratory rate of 21.0, creatinine of 5.1, WBC of 7.4, platelets of 75.0, and BUN of 108.0.",
+      "assessment": "The calibrated sepsis risk and the patient's elevated heart rate and creatinine levels are concerning for evolving sepsis [S4].",
+      "recommendation": "Consider initiating the Hour-1 bundle for sepsis management, which includes measuring lactate levels, obtaining blood cultures, administering broad-spectrum antibiotics, and fluid resuscitation if hypotensive [S1]."
+    },
+    "validation": {
+      "status": "valid",
+      "flags": []
+    },
+    "generator": "llm",
+    "citations": [
+      {
+        "citation_id": "S1",
+        "chunk_id": "hour-1-bundle:0001",
+        "doc": "hour-1-bundle",
+        "title": "Surviving Sepsis Campaign Hour-1 Bundle",
+        "text": ") Measure lactate level.* 2) Obtain blood cultures before administering antibiotics. 3) Administer broad-spectrum antibiotics. 4) Begin rapid administration of 30mL/kg crystalloid for hypotension or lactate \u22654 mmol/L. 5) Apply vasopressors if hypotensive during or after fluid resuscitation to maintain a mean arterial pressure \u2265 65 mm Hg. *Remeasure lactate if initial lactate elevated (> 2 mmol/L). BUNDLE \u00a9 2019 the Society of Critical Care Medicine and the European Society of Intensive Care Medicine. All Rights Reserved. survivingsepsis.org SCCM_SepsisBundleCard_die cut_1-11-19.indd 1 1/11/19 3:56 PM survivingsepsis.org 1. *Act quickly upon sepsis & septic shock recognition 2. Minimize time to treatment - sepsis & septic shock are medical emergencies 3. Monitor closely for response to interventions 4. Communicate sepsis status in hand-offs *All elements of the Hour-1 bundle may or may not be completed in the first hour after sepsis recognition SCCM_SepsisBundleCard_die cut_1-11-19.indd 2 1/11/19 3:56 PM",
+        "source": "https://sccm.org/SCCM/media/SCCM/PDFs/Surviving-Sepsis-Campaign-Hour-1-Bundle.pdf",
+        "score": 0.032266
+      },
+      {
+        "citation_id": "S2",
+        "chunk_id": "hour-1-bundle:0000",
+        "doc": "hour-1-bundle",
+        "title": "Surviving Sepsis Campaign Hour-1 Bundle",
+        "text": "# Surviving Sepsis Campaign Hour-1 Bundle\n\nInitial Resuscitation for Sepsis and Septic Shock \u00a9 2019 the Society of Critical Care Medicine and the European Society of Intensive Care Medicine. All Rights Reserved. Hour-1 Bundle Measure lactate level. Remeasure lactate if initial lactate elevated (> 2 mmol/L). Obtain blood cultures before administering antibiotics. Administer broad- spectrum antibiotics. Begin rapid administration of 30 mL/kg crystalloid for hypotension or lactate \u2265 4 mmol/L. Apply vasopressors if hypotensive during or after fluid resuscitation to maintain a mean arterial pressure \u2265 65 mm Hg. Bundle: SurvivingSepsis.org/Bundle Complete Guidelines: SurvivingSepsis.org/Guidelines Initiate bundle upon recognition of sepsis/septic shock. May not complete all bundle elements within one hour of recognition. MEDICAL EMERGENCY ! HOUR-1 BUNDLE: INITIAL RESUSCITATION FOR SEPSIS AND SEPTIC SHOCK: 1) Measure lactate level.* 2) Obtain blood cultures before administering antibiotics. 3) Administer broad-spectrum antibiotics. 4) Begin rapid administration of 30mL/kg crystalloid for hypotension or lactate \u22654 mmol/L. 5) Apply vasopressors if hypotensive during or after fluid resuscitation to maintain a mean arterial pressure \u2265 65 mm Hg. *Remeasure lactate if initial lactate elevated (> 2 mmol/L). BUNDLE \u00a9 2019 the Society of Critical Care Medicine and the European Society of Intensive Care Medicine. All Rights Reserved. survivingsepsis.org survivingsepsis.org 1. *Act quickly upon sepsis & septic shock recognition 2. Minimize time to treatment - sepsis & septic shock are medical emergencies 3. Monitor closely for response to interventions 4. Communicate sepsis status in hand-offs *All elements of the Hour-1 bundle may or may not be completed in the first hour after sepsis recognition HOUR-1 BUNDLE: INITIAL RESUSCITATION FOR SEPSIS AND SEPTIC SHOCK: 1) Measure lactate level.* 2) Obtain blood cultures before administering antibiotics. 3) Administer broad-spectrum antibiotics. 4) Begin rapid administration of 30mL/kg crystalloid for hypotension or lactate \u22654 mm",
+        "source": "https://sccm.org/SCCM/media/SCCM/PDFs/Surviving-Sepsis-Campaign-Hour-1-Bundle.pdf",
+        "score": 0.032258
+      },
+      {
+        "citation_id": "S3",
+        "chunk_id": "ssc-2021:0006",
+        "doc": "ssc-2021",
+        "title": "Surviving sepsis campaign: international guidelines for management of sepsis and septic shock 2021",
+        "text": "related to goal-directed therapy and meta-analyses of multiple studies targeting reductions in serum lactate in comparison to \u201cstandard care\u201d or increases in central venous oxygen saturation [ , ]. The panel recognises that normal serum lactate levels are not achievable in all patients with septic shock, but these studies support resuscitative strategies that decrease lactate toward normal. Serum lactate level should be interpreted considering the clinical context and other causes of elevated lactate. As with sepsis screening, lactate measurement may not always be available in some resource-limited settings.\n\nWhen advanced haemodynamic monitoring is not available, alternative measures of organ perfusion may be used to evaluate the effectiveness and safety of volume administration. Temperature of the extremities, skin mottling and capillary refill time (CRT) have been validated and shown to be reproducible signs of tissue perfusion [ , ]. The ANDROMEDA-SHOCK study evaluated whether a resuscitation strategy targeting CRT normalisation was more effective than a resuscitation strategy aiming at normalisation or decreasing lactate levels by 20% every 2 h in the first 8 h of septic shock [ ]. At day 3, the CRT group had significantly less organ dysfunction as assessed by SOFA score [mean SOFA score 5.6 (SD 4.3) versus 6.6 (SD 4.7); p = 0.045]. 28-day mortality was 34.9% in the peripheral perfusion group and 43.4% in the lactate group, but this difference did not reach statistical significance (HR 0.75; 95% CI 0.55\u20131.02). Despite the absence of a clear effect on mortality, using CRT during resuscitation has physiologic plausibility and is easily performed, non-invasive, and no cost. However, this approach should be augmented by careful, frequent, and comprehensive patient evaluation to predict or recognise fluid overload early, particularly where critical care resources are constrained. Relevant consideration of the background pathology or pathological processes pertinent to the patient should also inform management [ , ].\n\n### Mean arterial pressure\n\n### Rationale\n\nMAP is a key determinant of mean systemic filling pressure, which in turn, is the major driver of venous return and CO. Increasing MAP therefore usually results in increased tissue blood flow and augments the supply side of tissue perfusion. While some tissues, such as the brain and kidneys have the ability to auto-regulate blood flow, MAPs",
+        "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8486643/",
+        "score": 0.032051
+      },
+      {
+        "citation_id": "S4",
+        "chunk_id": "local-escalation-policy:0000",
+        "doc": "local-escalation-policy",
+        "title": "Project-local escalation policy",
+        "text": "# Project-local escalation policy (authored artefact)\n\n> **Status:** authored for this case study. It is **not** clinical guidance and\n> has not been approved by any hospital. It exists so the retrieval corpus has a\n> concrete escalation procedure to cite alongside the SSC guideline.\n\n## 1. Trigger\n\nEscalate when the calibrated sepsis risk is at or above the deployed threshold,\nor when a bedside clinician is concerned regardless of the score. The model is a\nscreening aid; clinician concern overrides it.\n\n## 2. SBAR structure\n\nEvery escalation draft contains four sections:\n\n- **Situation** \u2014 who the patient is, the current hour, the calibrated risk and\n  the top model drivers.\n- **Background** \u2014 objective facts available at that hour: vitals, lactate,\n  cultures, antibiotics, fluids, and relevant history.\n- **Assessment** \u2014 whether the risk and facts are concerning for evolving\n  sepsis, with the guideline citation that supports the statement.\n- **Recommendation** \u2014 what a clinician should consider, citing the local policy\n  or the guideline. The draft may recommend *considering* an action; it may not\n  issue a treatment order.\n\n## 3. Human approval\n\nThe agent may draft and propose. It may not page, order, or write to the EHR.\nA rapid-response page requires a human approval token minted after a clinician\nconfirms the specific alert. The token is bound to one alert, one patient and\none tool, expires in 15 minutes, and is consumed once. The model never sees the\nsigning secret.\n\n## 4. Escalation tiers\n\n1. **Bedside review** \u2014 the assigned nurse or clinician reviews the draft.\n2. **Rapid response** \u2014 if the clinician confirms, the approved token releases a\n   page to the rapid-response team.\n3. **ICU transfer** \u2014 a separate clinical decision; this system has no tool for\n   admission or transfer.\n\n## 5. Documentation and audit\n\nEvery tool call, approval, denial, and page is appended to the audit log. Note\ntext is hashed rather than copied into the log. A rejected draft is kept with\nthe reason so the prompt and retrieval can be reviewed.\n\n## 6. Hard prohibitions\n\n- No autonomous antibiotic, fluid, vasopressor, or culture order.\n- No autonomous ICU admission, discharge, or alert suppression.",
+        "source": "authored in this repository",
+        "score": 0.032051
+      },
+      {
+        "citation_id": "S5",
+        "chunk_id": "ssc-2021:0022",
+        "doc": "ssc-2021",
+        "title": "Surviving sepsis campaign: international guidelines for management of sepsis and septic shock 2021",
+        "text": "the development of antimicrobial resistance and efforts to reduce both the number of antibiotics administered and their spectrum of therapy are therefore important strategies in patients with sepsis and septic shock [ ]. This is particularly relevant in empiric therapy where broad-spectrum therapy is recommended, as the causative pathogen has not yet been identified. Once both the pathogen(s) and susceptibilities are known, antimicrobial de-escalation\u2014i.e. stopping an antimicrobial that is no longer necessary (in case of combination therapy) or changing an antimicrobial to narrow the spectrum is encouraged. Given the adverse societal and individual risks to continued unnecessary antimicrobial therapy, thoughtful de-escalation of antimicrobials based on adequate clinical improvement is appropriate even if cultures are negative. Early discontinuation of all antimicrobial therapy if infection is ruled out is advisable [ ]. Antimicrobial de-escalation should ideally be done as soon as possible, and rapid diagnostic techniques may facilitate this.\n\nWe identified direct evidence from 13 studies (1968 patients) [ ], including 1 RCT [ ]. In our meta-analysis, we observed improved short-term mortality in patients who were de-escalated (RR 0.72; 95% CI 0.57\u20130.91) (Supplementary Appendix 2). Long-term mortality was evaluated in one study only and did not demonstrate a difference (RR 0.99; 95% CI 0.64\u20131.52). De-escalation was associated with shorter length of stay in the hospital (MD \u22125.56 days; 95% CI \u22127.68 to \u22123.44), but not in the ICU (MD \u22122.6 days; 95% CI \u22125.91 to 0.72).\n\nMost studies were observational, and there are concerns that de-escalation is used primarily in patients who are getting better, which is why the reported improved short-term mortality should be interpreted with caution [ , ].\n\nDe-escalation is in generally safe, may offer cost savings when unnecessary antibiotics are discontinued, and reduced risk of antimicrobial resistance and reduced toxicity and side-effects may be important [ ]. Based on the overall very low quality of evidence, RCTs are warranted along with more studies on antimicrobial resistance.\n\n### Duration of antibiotics\n\n### Rationale\n\nRestricting antimicrobial therapy to the shortest course associated with better outcomes is an important part of antimicrobial stewardship [ \u2013 ]. The optimal duration of antimicrobial therapy for a given patient with seps",
+        "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8486643/",
+        "score": 0.03055
+      }
+    ],
+    "proposal": {
+      "alert_id": "alert-d8e6221877d3",
+      "patient_id": "p000206",
+      "as_of_hour": 15,
+      "reason": "The calibrated sepsis risk and the patient's elevated heart rate and creatinine levels are concerning for evolving sepsis [S4].",
+      "citations": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "status": "pending_approval",
+      "created_at": "2026-11-19T15:14:08.091867+00:00"
+    },
+    "alert_id": "alert-d8e6221877d3",
+    "status": "pending_approval"
+  },
+  "denied_without_token": "ApprovalRequired: page_rapid_response is an irreversible action; a human approval token bound to this alert and patient is required",
+  "page": {
+    "alert_id": "alert-d8e6221877d3",
+    "patient_id": "p000206",
+    "status": "paged",
+    "transport": "local-demo",
+    "note_sha256": "79a6827b25047c33",
+    "paged_at": "2026-11-19T15:14:08.096965+00:00"
+  },
+  "audit": [
+    {
+      "ts": "2026-11-19T15:14:08.094899+00:00",
+      "monotonic": 794240.796,
+      "tool": "page_rapid_response",
+      "actor": "agent",
+      "args": {
+        "alert_id": "alert-d8e6221877d3",
+        "patient_id": "p000206",
+        "note": {
+          "sha256": "79a6827b25047c33",
+          "chars": 1224
+        }
+      },
+      "outcome": "denied",
+      "error": "ApprovalRequired",
+      "detail": "page_rapid_response is an irreversible action; a human approval token bound to this alert and patient is required"
+    },
+    {
+      "ts": "2026-11-19T15:14:08.097978+00:00",
+      "monotonic": 794240.796,
+      "tool": "page_rapid_response",
+      "actor": "agent",
+      "args": {
+        "alert_id": "alert-d8e6221877d3",
+        "patient_id": "p000206",
+        "note": {
+          "sha256": "79a6827b25047c33",
+          "chars": 1224
+        }
+      },
+      "outcome": "ok",
+      "side_effect": "write"
+    }
+  ]
+}

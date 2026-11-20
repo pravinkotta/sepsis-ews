@@ -1,0 +1,12 @@
+services:
+  sepsis-ews:
+    build: .
+    image: sepsis-ews:0.5.0
+    ports:
+      - "8000:8000"
+    environment:
+      SEPSIS_APPROVAL_SECRET: ${SEPSIS_APPROVAL_SECRET:?set SEPSIS_APPROVAL_SECRET (32+ random bytes)}
+      SEPSIS_APPROVAL_API_KEY: ${SEPSIS_APPROVAL_API_KEY:?set SEPSIS_APPROVAL_API_KEY for the clinician UI}
+    volumes:
+      - ./artifacts:/app/artifacts
+    restart: unless-stopped

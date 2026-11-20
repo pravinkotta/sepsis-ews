@@ -1,0 +1,22 @@
+{
+  "q01": "Measure blood lactate in adults with suspected sepsis as an adjunct to clinical assessment.",
+  "q02": "Obtain blood cultures before administering antimicrobials when this does not substantially delay treatment.",
+  "q03": "For possible septic shock or a high likelihood of sepsis, give antimicrobials immediately, ideally within 1 hour of recognition.",
+  "q04": "Give at least 30 mL/kg of intravenous crystalloid within the first 3 hours for sepsis-induced hypoperfusion or septic shock.",
+  "q05": "Use dynamic measures such as passive leg raise, stroke volume variation, pulse pressure variation, or echocardiography to guide fluid resuscitation.",
+  "q06": "Target an initial mean arterial pressure of 65 mm Hg in adults with septic shock who are on vasopressors.",
+  "q07": "Norepinephrine is the first-line vasopressor for septic shock.",
+  "q08": "Perform source control as soon as feasible after the diagnosis is made.",
+  "q09": "Consider intravenous corticosteroids for septic shock that is refractory to fluids and vasopressors.",
+  "q10": "Use a restrictive red blood cell transfusion threshold of hemoglobin below 7 g/dL in adults with sepsis, unless a specific indication exists.",
+  "q11": "Use low tidal volume ventilation of about 6 mL/kg predicted body weight in sepsis-associated ARDS.",
+  "q12": "Use prone positioning for at least 12 hours per day in moderate-to-severe ARDS.",
+  "q13": "Target a glucose level around 144 to 180 mg/dL with insulin in critically ill patients with sepsis.",
+  "q14": "Use pharmacologic venous thromboembolism prophylaxis, preferably low-molecular-weight heparin, unless contraindicated.",
+  "q15": "Use renal replacement therapy for sepsis-associated acute kidney injury with metabolic or volume derangements.",
+  "q16": "Start early enteral nutrition when feasible in critically ill patients with sepsis.",
+  "q17": "Reassess antimicrobials daily and de-escalate when possible; prefer shorter courses when the infection is controlled.",
+  "q18": "Admit adults with sepsis or septic shock who require intensive care to the ICU within 6 hours.",
+  "q19": "Use SBAR to communicate situation, background, assessment, and recommendation to the rapid response team.",
+  "q20": "A rapid-response page requires a human approval token bound to the alert and patient; the agent cannot page autonomously."
+}

@@ -1,0 +1,46 @@
+{
+  "checks": {
+    "bad_files": [],
+    "columns_ok": true,
+    "duplicate_ids": 0,
+    "icu_hours_contiguous": true,
+    "label_monotonic": true
+  },
+  "dataset": "physionet-challenge-2019",
+  "doi": "10.13026/v64v-d857",
+  "generated_at": "2026-11-19T10:54:16.648485+00:00",
+  "license": "CC BY 4.0",
+  "sampled": false,
+  "sets": {
+    "A": {
+      "hours": 790215,
+      "patients": 20336,
+      "sepsis_patients": 1790
+    },
+    "B": {
+      "hours": 761995,
+      "patients": 20000,
+      "sepsis_patients": 1142
+    }
+  },
+  "source": "s3://physionet-open/challenge-2019/1.0.0/training",
+  "split": {
+    "overlap": 0,
+    "ratios": [
+      0.7,
+      0.15,
+      0.15
+    ],
+    "seed": 42,
+    "test": 6050,
+    "train": 28235,
+    "val": 6051
+  },
+  "totals": {
+    "hours": 1552210,
+    "patients": 40336,
+    "prevalence": 0.072689,
+    "sepsis_patients": 2932
+  },
+  "version": "1.0.0"
+}

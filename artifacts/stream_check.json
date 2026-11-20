@@ -1,0 +1,11 @@
+{
+  "duration_seconds": 0.598,
+  "end_hour": 49,
+  "events": 48,
+  "expected_events": 48,
+  "measured_at": "2026-11-19T13:47:40Z",
+  "ms_per_event": 12.45,
+  "patient_id": "p000206",
+  "start_hour": 2,
+  "transport": "uvicorn + urllib SSE (real HTTP)"
+}

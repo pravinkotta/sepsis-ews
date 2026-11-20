@@ -1,0 +1,278 @@
+{
+  "attributes": [
+    "age_band",
+    "sex",
+    "unit"
+  ],
+  "caveat": "Observations about this model on one retrospective cohort, not proof of discrimination. Hour-level rates weight long stays. 95% intervals are Wilson binomial intervals, not causal claims.",
+  "deltas": {
+    "age_band": {
+      "fpr_max_min": 0.0338,
+      "groups_compared": [
+        "50-64",
+        "65-79",
+        "80+",
+        "<50"
+      ],
+      "recall_max_min": 0.0376
+    },
+    "sex": {
+      "fpr_max_min": 0.0109,
+      "groups_compared": [
+        "female",
+        "male"
+      ],
+      "recall_max_min": 0.036
+    },
+    "unit": {
+      "fpr_max_min": 0.1582,
+      "groups_compared": [
+        "MICU",
+        "Other",
+        "SICU"
+      ],
+      "recall_max_min": 0.0658
+    }
+  },
+  "generated_at": "2026-11-19T13:00:39.709603+00:00",
+  "groups": [
+    {
+      "alerts": 29228,
+      "attribute": "age_band",
+      "fp": 28239,
+      "fpr": 0.4194,
+      "fpr_ci95": [
+        0.4156,
+        0.4231
+      ],
+      "group": "50-64",
+      "n_hours": 68423,
+      "n_patients": 1833,
+      "positives": 1084,
+      "recall": 0.9124,
+      "recall_ci95": [
+        0.894,
+        0.9278
+      ],
+      "selection_rate": 0.4272,
+      "selection_rate_ci95": [
+        0.4235,
+        0.4309
+      ],
+      "suppressed": false,
+      "tp": 989
+    },
+    {
+      "alerts": 38043,
+      "attribute": "age_band",
+      "fp": 36571,
+      "fpr": 0.4521,
+      "fpr_ci95": [
+        0.4486,
+        0.4555
+      ],
+      "group": "65-79",
+      "n_hours": 82503,
+      "n_patients": 2053,
+      "positives": 1606,
+      "recall": 0.9166,
+      "recall_ci95": [
+        0.902,
+        0.9291
+      ],
+      "selection_rate": 0.4611,
+      "selection_rate_ci95": [
+        0.4577,
+        0.4645
+      ],
+      "suppressed": false,
+      "tp": 1472
+    },
+    {
+      "alerts": 14895,
+      "attribute": "age_band",
+      "fp": 14456,
+      "fpr": 0.4532,
+      "fpr_ci95": [
+        0.4477,
+        0.4587
+      ],
+      "group": "80+",
+      "n_hours": 32393,
+      "n_patients": 816,
+      "positives": 495,
+      "recall": 0.8869,
+      "recall_ci95": [
+        0.8559,
+        0.9118
+      ],
+      "selection_rate": 0.4598,
+      "selection_rate_ci95": [
+        0.4544,
+        0.4653
+      ],
+      "suppressed": false,
+      "tp": 439
+    },
+    {
+      "alerts": 23205,
+      "attribute": "age_band",
+      "fp": 22287,
+      "fpr": 0.4447,
+      "fpr_ci95": [
+        0.4403,
+        0.449
+      ],
+      "group": "<50",
+      "n_hours": 51112,
+      "n_patients": 1348,
+      "positives": 993,
+      "recall": 0.9245,
+      "recall_ci95": [
+        0.9064,
+        0.9393
+      ],
+      "selection_rate": 0.454,
+      "selection_rate_ci95": [
+        0.4497,
+        0.4583
+      ],
+      "suppressed": false,
+      "tp": 918
+    },
+    {
+      "alerts": 46382,
+      "attribute": "sex",
+      "fp": 44853,
+      "fpr": 0.435,
+      "fpr_ci95": [
+        0.432,
+        0.4381
+      ],
+      "group": "female",
+      "n_hours": 104736,
+      "n_patients": 2660,
+      "positives": 1634,
+      "recall": 0.9357,
+      "recall_ci95": [
+        0.9228,
+        0.9466
+      ],
+      "selection_rate": 0.4428,
+      "selection_rate_ci95": [
+        0.4398,
+        0.4459
+      ],
+      "suppressed": false,
+      "tp": 1529
+    },
+    {
+      "alerts": 58989,
+      "attribute": "sex",
+      "fp": 56700,
+      "fpr": 0.4459,
+      "fpr_ci95": [
+        0.4432,
+        0.4487
+      ],
+      "group": "male",
+      "n_hours": 129695,
+      "n_patients": 3390,
+      "positives": 2544,
+      "recall": 0.8998,
+      "recall_ci95": [
+        0.8875,
+        0.9108
+      ],
+      "selection_rate": 0.4548,
+      "selection_rate_ci95": [
+        0.4521,
+        0.4575
+      ],
+      "suppressed": false,
+      "tp": 2289
+    },
+    {
+      "alerts": 35302,
+      "attribute": "unit",
+      "fp": 33944,
+      "fpr": 0.4957,
+      "fpr_ci95": [
+        0.492,
+        0.4995
+      ],
+      "group": "MICU",
+      "n_hours": 69907,
+      "n_patients": 1782,
+      "positives": 1435,
+      "recall": 0.9463,
+      "recall_ci95": [
+        0.9334,
+        0.9569
+      ],
+      "selection_rate": 0.505,
+      "selection_rate_ci95": [
+        0.5013,
+        0.5087
+      ],
+      "suppressed": false,
+      "tp": 1358
+    },
+    {
+      "alerts": 45122,
+      "attribute": "unit",
+      "fp": 43451,
+      "fpr": 0.4817,
+      "fpr_ci95": [
+        0.4785,
+        0.485
+      ],
+      "group": "Other",
+      "n_hours": 92046,
+      "n_patients": 2368,
+      "positives": 1847,
+      "recall": 0.9047,
+      "recall_ci95": [
+        0.8905,
+        0.9173
+      ],
+      "selection_rate": 0.4902,
+      "selection_rate_ci95": [
+        0.487,
+        0.4934
+      ],
+      "suppressed": false,
+      "tp": 1671
+    },
+    {
+      "alerts": 24947,
+      "attribute": "unit",
+      "fp": 24158,
+      "fpr": 0.3375,
+      "fpr_ci95": [
+        0.334,
+        0.341
+      ],
+      "group": "SICU",
+      "n_hours": 72478,
+      "n_patients": 1900,
+      "positives": 896,
+      "recall": 0.8806,
+      "recall_ci95": [
+        0.8577,
+        0.9002
+      ],
+      "selection_rate": 0.3442,
+      "selection_rate_ci95": [
+        0.3408,
+        0.3477
+      ],
+      "suppressed": false,
+      "tp": 789
+    }
+  ],
+  "level": "patient-hour",
+  "min_group_patients": 50,
+  "suppressed": [],
+  "threshold": 0.0062
+}

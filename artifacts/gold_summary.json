@@ -1,0 +1,23 @@
+{
+  "bad_files": [],
+  "columns": 98,
+  "duration_seconds": 1133.7,
+  "generated_at": "2026-11-19T11:13:28.158267+00:00",
+  "gold_path": "artifacts\\gold_hourly.parquet",
+  "hours": 1552210,
+  "limit": null,
+  "patients": 40336,
+  "prevalence": 0.072689,
+  "raw_root": "data\\raw",
+  "sepsis_patients": 2932,
+  "split_hours": {
+    "test": 234431,
+    "train": 1086017,
+    "val": 231762
+  },
+  "split_patients": {
+    "test": 6050,
+    "train": 28235,
+    "val": 6051
+  }
+}

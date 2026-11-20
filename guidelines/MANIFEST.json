@@ -1,0 +1,26 @@
+{
+  "documents": [
+    {
+      "file": "ssc-2021.md",
+      "keywords_ok": true,
+      "min_words": 20000,
+      "sha256": "8e2368ca9900b2a070768063e6a64f15be312901b4640dcad176a8644a087596",
+      "words": 27336
+    },
+    {
+      "file": "hour-1-bundle.md",
+      "keywords_ok": true,
+      "min_words": 100,
+      "sha256": "85e82ed2e8021241ce3efb6ef5bb57215a992d0d67b09c82227817a6b1847e33",
+      "words": 442
+    },
+    {
+      "file": "local-escalation-policy.md",
+      "keywords_ok": true,
+      "min_words": 200,
+      "sha256": "4304e3d3bfe3129838e9202a8d1818b92acd1353e376785ad2b4802bc9b3cf4f",
+      "words": 401
+    }
+  ],
+  "generated_at": "2026-11-19T12:29:45.742534+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "champion": "lightgbm",
+  "decision_rule": "GRU is champion only if validation AUPRC improves by > 0.002 and validation AUROC is not worse by more than 0.002.",
+  "gru": {
+    "test_auprc": 0.034319,
+    "test_auroc": 0.734139,
+    "val_auprc": 0.044301,
+    "val_auroc": 0.758425
+  },
+  "lightgbm": {
+    "test_auprc": 0.060886,
+    "test_auroc": 0.831231,
+    "val_auprc": 0.068524,
+    "val_auroc": 0.834443
+  },
+  "note": "Test metrics are reported for both models; the champion decision uses validation only."
+}

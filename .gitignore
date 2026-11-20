@@ -1,0 +1,47 @@
+# Raw data is never committed (CC BY 4.0, but hundreds of MB).
+data/raw/
+*.part
+
+# Secrets
+.env
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Private working docs and deliverables — never published
+docs/
+Capstone-Writeup.pdf
+Capstone-Deck.pdf
+Project-Report.pdf
+
+# Large / derived artifacts (small JSON gate artefacts ARE committed)
+artifacts/gold_*.parquet
+artifacts/serving.parquet
+artifacts/model.txt
+artifacts/gru.pt
+artifacts/drift_report.html
+docs/Capstone-Writeup.html
+docs/Capstone-Deck.html
+docs/Project-Report.html
+deploy/identity/dex.yaml
+deploy/identity/oauth2-proxy.cfg
+artifacts/*.joblib
+artifacts/*.pt
+artifacts/*.pkl
+artifacts/chroma/
+artifacts/audit.jsonl
+artifacts/pages.jsonl
+artifacts/proposals.jsonl
+artifacts/notes.jsonl
+artifacts/alerts/
+mlruns/
+mlflow.db
+*.db
+artifacts/*.log
+artifacts/local-server.pid

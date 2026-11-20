@@ -1,0 +1,40 @@
+{
+  "agent": "pending_approval",
+  "ehr": {
+    "body": {
+      "alert_id": "alert-7f5eb59b4701",
+      "delivered": true,
+      "delivery": {
+        "communication_id": "854943",
+        "create_status": 201,
+        "note_sha256": "e29f60648dbb70ae",
+        "patient_id": "sepsis-demo-p000206",
+        "readback_status": 200
+      },
+      "note_sha256": "e29f60648dbb70ae",
+      "patient_id": "p000206",
+      "status": "written",
+      "transport": "fhir",
+      "written_at": "2026-11-20T03:48:10.062243+00:00"
+    },
+    "status": 200
+  },
+  "page": {
+    "body": {
+      "alert_id": "alert-7f5eb59b4701",
+      "delivered": true,
+      "delivery": {
+        "attempts": 1,
+        "body": "This URL has no default content configured. <a href=\"https://webhook.site/#!/edit/a3556d2f-babf-4a63-874a-3590d203889a\">Change response in Webhook.site</a>.",
+        "idempotency_key": "alert-7f5eb59b4701",
+        "status_code": 200
+      },
+      "note_sha256": "e29f60648dbb70ae",
+      "paged_at": "2026-11-20T03:48:09.149017+00:00",
+      "patient_id": "p000206",
+      "status": "paged",
+      "transport": "webhook"
+    },
+    "status": 200
+  }
+}

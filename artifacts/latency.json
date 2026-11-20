@@ -1,0 +1,18 @@
+{
+  "api_score": {
+    "max_ms": 23.065,
+    "n": 100,
+    "p50_ms": 18.986,
+    "p95_ms": 20.534,
+    "p99_ms": 20.736
+  },
+  "measured_at": "2026-11-19T13:47:03Z",
+  "model_score": {
+    "max_ms": 11.89,
+    "n": 100,
+    "p50_ms": 9.379,
+    "p95_ms": 10.039,
+    "p99_ms": 10.723
+  },
+  "note": "model_score is the store+model path; api_score adds FastAPI/Pydantic and TestClient in-process overhead (no network hop)."
+}

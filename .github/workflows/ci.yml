@@ -1,0 +1,71 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    name: offline tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+      - run: pip install -r requirements-dev.txt
+      - run: python -m pytest -q
+
+  authority:
+    name: authority gate (always on, no secrets)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+      - run: pip install -r requirements-dev.txt
+      - run: python -m src.redteam --check
+      - run: python -m src.gates --require authority
+
+  measured:
+    name: measured gates (skip honestly when artifacts are absent)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+      - run: pip install -r requirements-dev.txt
+
+      - name: data contract
+        if: ${{ hashFiles('artifacts/data_profile.json') != '' }}
+        run: python -m src.gates --require data
+
+      - name: data contract (skipped)
+        if: ${{ hashFiles('artifacts/data_profile.json') == '' }}
+        run: echo "SKIP data gate - run scripts/download_data.py to produce artifacts/data_profile.json"
+
+      - name: model gate
+        if: ${{ hashFiles('artifacts/metrics.json') != '' }}
+        run: python -m src.gates --require model
+
+      - name: model gate (skipped)
+        if: ${{ hashFiles('artifacts/metrics.json') == '' }}
+        run: echo "SKIP model gate - no measured metrics.json exists"
+
+      - name: grounding gate
+        if: ${{ hashFiles('artifacts/eval_scores.json') != '' }}
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python -m src.gates --require grounding
+
+      - name: grounding gate (skipped)
+        if: ${{ hashFiles('artifacts/eval_scores.json') == '' }}
+        run: echo "SKIP grounding gate - no measured eval_scores.json exists"
