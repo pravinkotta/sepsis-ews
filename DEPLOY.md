@@ -107,7 +107,7 @@ Evidence: `artifacts/oidc_check.json`, `artifacts/webhook_check.json`,
 
 ## 6. Release checklist
 
-- [ ] `python -m pytest -q` (93 tests)
+- [ ] `python -m pytest -q` (92 tests)
 - [ ] T1: `python scripts/setup_identity_demo.py` + `docker compose -f deploy/identity/docker-compose.yml up -d --build`
 - [ ] T1: `python scripts/oidc_check.py` (login → approve → page → replay 403)
 - [ ] P1: `python -m src.webhook_check` or a PagerDuty routing key

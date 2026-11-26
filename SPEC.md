@@ -167,7 +167,7 @@ matching the program calendar.
 - [x] 11/11 red-team scenarios and 5/5 surface checks pass with no network.
 - [x] `python -m src.gates` reports SKIP for absent artefacts and PASS for
       authority; CI runs the authority gate on every push.
-- [x] 93 tests pass locally; with `requirements-dev.txt` only, 92 pass and the
+- [x] 92 tests pass locally; with `requirements-dev.txt` only, 91 pass and the
       MCP smoke test skips (no network, no key).
 
 ### Phase 2 — data plane (M1)

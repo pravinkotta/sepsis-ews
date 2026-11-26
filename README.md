@@ -245,7 +245,7 @@ production tier.
 | `src/static/review.html` | Single-file review workbench |
 | `Dockerfile` / `docker-compose.yml` / `DEPLOY.md` | Container and runbook |
 | `notebooks/` | Executed, artifact-driven walkthrough |
-| `tests/` | 93 tests; no network, no key (1 skips without `mcp`) |
+| `tests/` | 92 tests; no network, no key (1 skips without `mcp`) |
 
 ## Quickstart
 
@@ -253,7 +253,7 @@ production tier.
 pip install -r requirements-dev.txt     # tests + model
 pip install -r requirements.txt         # corpus, RAG, LangGraph, demo
 
-python -m pytest -q              # 93 tests, offline
+python -m pytest -q              # 92 tests, offline
 python -m src.redteam --check    # 11 attacks + 5 surface checks
 python -m src.gates              # data/model PASS, grounding SKIP, authority PASS
 

@@ -67,14 +67,16 @@ authority gate.
 
 - No conformity assessment, clinical evaluation, or post-market surveillance.
 - No prospective validation; calibration may drift on a new cohort.
-- No real EHR integration; replay is not a live feed, and writes go to a local
-  JSONL transport.
+- No hospital EHR integration; replay is not a live feed, and E1 writes only
+  de-identified demo data to a public HAPI FHIR sandbox.
 - Fairness is audited on three attributes, not intersectionally.
 - The RAGAS evaluation is a 20-question authored regression suite; answer
   relevancy is 0.607 and two answerable questions were conservatively refused.
   Judge token usage is not included in the cost estimate.
 - The MCP inspector has not yet been run; the tool surface is test-asserted.
-- The review UI exists, but there is **no public deployment**, TLS, or SSO; the
-  clinician API key is a demo gate.
+- The review UI exists, but there is **no public deployment or TLS**. Local Dex
+  SSO is a demo without MFA/RBAC; API-key mode remains a demo gate.
+- P1 delivery is a generic webhook; the PagerDuty transport is implemented and
+  mock-tested but has not run against a real routing key.
 - The service replays the test cohort; a real EHR/feature-store feed is not
   integrated.
